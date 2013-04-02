@@ -19,7 +19,7 @@
 		scriptSrc : 'js/conditionizr/',
 		styleSrc  : 'css/conditionizr/',
 		ieLessThan: { active: false, version: '9', scripts: false, styles: false, classes: true, customScript: false },
-        android   : { scripts: false, styles: false, classes: true, customScript: false },
+        	android   : { scripts: false, styles: false, classes: true, customScript: false },
 		chrome    : { scripts: false, styles: false, classes: true, customScript: false },
 		safari    : { scripts: false, styles: false, classes: true, customScript: false },
 		opera     : { scripts: false, styles: false, classes: true, customScript: false },
@@ -102,17 +102,17 @@
 
 	for (var i = 0; i < browsers.length; i++) {
 		var currentBrowser = browsers[i];
-        var userAgent = navigator.userAgent.toLowerCase();
+        	var userAgent = navigator.userAgent.toLowerCase();
 
-        if(userAgent.indexOf('android') > -1 && userAgent.indexOf('chrome') === -1
-                                             && userAgent.indexOf('firefox') === -1
-                                             && userAgent.indexOf('opera') === -1) {
-            var browserSettings = settings.android;
-            var theBrowser = 'android';
-            conditionizrLoader();
-            actualBrowser = theBrowser;
-            break;
-        }
+	        if(userAgent.indexOf('android') > -1 && userAgent.indexOf('chrome') === -1
+	                                             && userAgent.indexOf('firefox') === -1
+	                                             && userAgent.indexOf('opera') === -1) {
+            		var browserSettings = settings.android;
+            		var theBrowser = 'android';
+            		conditionizrLoader();
+            		actualBrowser = theBrowser;
+            		break;
+	        }
 
 		if (userAgent.indexOf(currentBrowser.testWith) > -1) {
 			var browserSettings = currentBrowser.testSettings;
