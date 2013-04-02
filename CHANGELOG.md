@@ -1,5 +1,8 @@
 # Changelog
 
+### 2.2.1
+- Detect Android stock browser
+
 ### 2.2.0
 - Touch detection, scripts and style loading
 - Minor optimisations
